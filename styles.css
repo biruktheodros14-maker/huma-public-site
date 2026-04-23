@@ -129,6 +129,23 @@ h3 {
   margin-top: 28px;
 }
 
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hero-tags span {
+  padding: 10px 14px;
+  border: 1px solid rgba(31, 38, 48, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.56);
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -192,6 +209,12 @@ main {
   color: #f6efe5;
 }
 
+.panel-dark h3,
+.panel-dark .contact-label,
+.panel-dark .contact-note {
+  color: #fff8f2;
+}
+
 .panel-dark a {
   color: #ffd2a4;
   font-weight: 700;
@@ -207,6 +230,37 @@ main {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
+}
+
+.founder-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.founder-card,
+.contact-card {
+  position: relative;
+  padding: 24px 20px;
+  border: 1px solid rgba(31, 38, 48, 0.1);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.founder-label,
+.contact-label {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent-deep);
+}
+
+.founder-copy {
+  display: grid;
+  gap: 14px;
 }
 
 .layers {
@@ -247,6 +301,59 @@ main {
   gap: 18px;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.button-light {
+  color: var(--ink);
+  background: linear-gradient(135deg, #ffd6a1, #ffe8c9);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
+}
+
+.button-outline-light {
+  color: #fff8f2;
+  background: transparent;
+  border: 1px solid rgba(255, 248, 242, 0.36);
+}
+
+.contact-note {
+  margin-top: 18px;
+}
+
+.panel-cta {
+  background:
+    linear-gradient(135deg, rgba(255, 247, 235, 0.98), rgba(247, 238, 224, 0.95)),
+    var(--surface);
+}
+
+.cta-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.8fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.cta-actions {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+}
+
 code {
   padding: 0.14rem 0.38rem;
   border-radius: 8px;
@@ -270,7 +377,10 @@ code {
 @media (max-width: 860px) {
   .grid-two,
   .cards,
-  .layers {
+  .layers,
+  .contact-grid,
+  .cta-layout,
+  .founder-layout {
     grid-template-columns: 1fr;
   }
 
